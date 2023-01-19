@@ -1,4 +1,6 @@
 import express from 'express';
+import ProductRoutes from './src/routes/products.routes';
+import { StatusCodes } from 'http-status-codes';
 
 const bodyParser = require("body-parser");
 
@@ -12,9 +14,10 @@ app.get('/', (_req, res) => {
 });
 
 
-
 const port = 8000;
 
 app.listen(port, () => {
   console.log(`Server is running on ${port}`);
 });
+
+app.use(ProductRoutes);
