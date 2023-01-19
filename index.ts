@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(bodyParser.json());
 
 app.get('/', (_req, res) => {
-    res.status(200).send('Welcome to Game Store');
+    res.status(200).send('Welcome to Bit Store');
 });
 
 
